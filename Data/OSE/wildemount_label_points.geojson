@@ -65,6 +65,20 @@
 { "type": "Feature", "properties": { "id": null, "name": "Kaltenloch", "type": "big_water" }, "geometry": { "type": "Point", "coordinates": [ 17.939788924336934, 9.474619266407055 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Far Hharom", "type": "landscape_big" }, "geometry": { "type": "Point", "coordinates": [ 34.033845374953827, 8.968349278724144 ] } },
 { "type": "Feature", "properties": { "id": null, "name": "Ebonglass Massif", "type": "sm_mountain" }, "geometry": { "type": "Point", "coordinates": [ 34.453516548957531, 7.256357346682042 ] } },
-{ "type": "Feature", "properties": { "id": null, "name": "Tooth of Zehir", "type": "big_ash" }, "geometry": { "type": "Point", "coordinates": [ 35.865743356710261, 4.818267669138594 ] } }
+{ "type": "Feature", "properties": { "id": null, "name": "Tooth of Zehir", "type": "big_ash" }, "geometry": { "type": "Point", "coordinates": [ 35.865743356710261, 4.818267669138594 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Rumblecusp", "type": null }, "geometry": { "type": "Point", "coordinates": [ 18.128389035090766, -4.727077865600753 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Urukayxl", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 20.38663644759248, -5.971012389060474 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Vide Cay", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 14.647903631515218, -3.184816021834565 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Gravid Archipelago", "type": "Archipelago" }, "geometry": { "type": "Point", "coordinates": [ 12.536107812618482, -2.143382467310149 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Bwualli", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 13.767386025519743, -6.010789365101345 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Twinward Isles", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 16.511187646670042, -0.79604260994581 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Biessel", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 14.486987682986213, 19.970921169817096 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Gelier", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 14.700562923660165, 17.702955518850839 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Teargross", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 20.334881177630152, 15.465500616552287 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Frostbogen", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 17.6804460435396, 16.197758584577269 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Schneescel", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 16.63291033928164, 17.123251294164398 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Foren", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 19.368707469819416, 17.845339012633474 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Kaltsel", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 22.44012283570197, 16.970697550825857 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "Dampfan", "type": "Island" }, "geometry": { "type": "Point", "coordinates": [ 19.907730696282247, 20.520114645835832 ] } }
 ]
 }
