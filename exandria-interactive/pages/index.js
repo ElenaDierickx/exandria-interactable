@@ -1,7 +1,26 @@
 import Head from "next/head";
 import Image from "next/image";
+import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+    const mapContainer = useRef(null);
+    const map = useRef(null);
+
+    useEffect(() => {
+        mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAP_API ?? "";
+        map.current = new mapboxgl.Map(
+            {
+                container: mapContainer.current,
+                style: "mapbox://styles/mapbox/light-v10",
+                center: [15.4542, 18.7322], // center map on Chad
+                zoom: 1.8,
+            },
+            []
+        );
+    });
+
     return (
         <>
             <Head>
@@ -10,7 +29,9 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main></main>
+            <main className="h-screen w-screen">
+                <div className="map-container h-full w-full" ref={mapContainer} />
+            </main>
         </>
     );
 }
