@@ -20,6 +20,8 @@ export default function Home() {
             },
             []
         );
+
+        map.current.addControl(new mapboxgl.NavigationControl());
     });
 
     return (
