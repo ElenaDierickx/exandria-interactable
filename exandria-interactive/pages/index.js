@@ -13,9 +13,10 @@ export default function Home() {
         map.current = new mapboxgl.Map(
             {
                 container: mapContainer.current,
-                style: "mapbox://styles/mapbox/light-v10",
-                center: [15.4542, 18.7322], // center map on Chad
-                zoom: 1.8,
+                style: "mapbox://styles/litharelle/clbze8br5001414nhxbazvw8p/draft",
+                center: [15.4542, 5], // center map on Chad
+                zoom: 4,
+                projection: "equirectangular",
             },
             []
         );
