@@ -9,7 +9,9 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@mapbox/search-js-react": "^1.0.0-beta.14",
         "@next/font": "13.1.1",
+        "@seanhouli/react-mapbox-search": "^1.0.5",
         "dotenv": "^16.0.3",
         "eslint": "8.31.0",
         "eslint-config-next": "13.1.1",
@@ -17,7 +19,9 @@
         "mapbox-gl": "^2.12.0",
         "next": "13.1.1",
         "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "react-dom": "18.2.0",
+        "react-map-gl": "^7.0.21",
+        "react-map-gl-geocoder": "^2.2.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.13",
