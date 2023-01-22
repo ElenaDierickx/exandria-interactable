@@ -4,12 +4,12 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
+                <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
                 <link
                     rel="stylesheet"
                     href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css"
                     type="text/css"
-                ></link>
-                <link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" />
+                />
             </Head>
             <body>
                 <Main />

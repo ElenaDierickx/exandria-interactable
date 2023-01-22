@@ -13,8 +13,12 @@ export default function Home() {
             initialViewState={{
                 longitude: 15.4542,
                 latitude: 5,
-                zoom: 4,
+                zoom: 5,
             }}
+            maxBounds={[
+                [5, 0],
+                [97, 40],
+            ]}
             projection="equirectangular"
             mapStyle="mapbox://styles/litharelle/clbze8br5001414nhxbazvw8p/draft"
             mapboxAccessToken={MAPBOX_TOKEN}
