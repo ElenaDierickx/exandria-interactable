@@ -3,7 +3,7 @@ export const layerCities = {
   type: "symbol",
   source: "cities",
   layout: {
-    "icon-image": "./images/cr_icon_poi.png",
+    "icon-image": "cr_icon_pop",
     "icon-size": ["interpolate", ["linear"], ["zoom"], 4, 0.05, 12, 0.2],
     "icon-allow-overlap": false,
     "text-allow-overlap": false,
@@ -33,7 +33,7 @@ export const layerPois = {
   type: "symbol",
   source: "pois",
   layout: {
-    "icon-image": "./images/cr_icon_poi.png",
+    "icon-image": "cr_icon_poi",
     "icon-size": ["step", ["zoom"], 0, 4.5, 0.04, 5, 0.06, 6, 0.07],
     "icon-allow-overlap": false,
     "text-allow-overlap": false,
