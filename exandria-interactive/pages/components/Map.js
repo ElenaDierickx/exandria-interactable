@@ -4,18 +4,64 @@ import MapGL, {
   NavigationControl,
   Source,
   Layer,
-  useMap,
   MapProvider,
+  Popup,
 } from "react-map-gl";
 import { layerCities, layerPois } from "../utils/layers";
 import MapUtil from "../utils/mapUtil";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Map() {
   const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAP_API ?? "";
+  const [popup, setPopup] = useState(null);
+
+  function createPopup(e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var name = e.features[0].properties.Name;
+    var population = e.features[0].properties.Population;
+    var category = e.features[0].properties.Type;
+    var info = e.features[0].properties.Info;
+
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+    setPopup(
+      <Popup
+        closeOnClick={false}
+        longitude={coordinates[0]}
+        latitude={coordinates[1]}
+        onClose={() => {
+          setPopup(null);
+        }}
+        closeButton={false}
+      >
+        <div className="flex flex-row justify-between">
+          <diV>
+            {category && <p className="">{category} of</p>}
+            <h2 className="font-bold text-xl">{name}</h2>
+          </diV>
+          <div>
+            <FontAwesomeIcon
+              className="hover:cursor-pointer text-lg"
+              onClick={() => setPopup(null)}
+              icon={faXmark}
+            />
+          </div>
+        </div>
+
+        {population && <h3 className="font-bold">Population: </h3>}
+        {population && <p className="">{population}</p>}
+        {info && <h3 className="font-bold">Description: </h3>}
+        {info && <p className="">{info}</p>}
+      </Popup>
+    );
+  }
 
   return (
     <MapProvider>
-      <MapUtil />
+      <MapUtil createPopup={createPopup} />
       <MapGL
         id="map"
         initialViewState={{
@@ -38,6 +84,7 @@ export default function Map() {
           <Layer {...layerPois} />
         </Source>
         <NavigationControl />
+        {popup}
       </MapGL>
     </MapProvider>
   );
