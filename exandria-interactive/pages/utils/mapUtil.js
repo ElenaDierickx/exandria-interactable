@@ -17,24 +17,23 @@ export default function MapUtil() {
         if (!map.hasImage("cr_icon_pop"))
           map.addImage("cr_icon_pop", image, { sdf: true });
       });
-      //   map.on("click", layerCities, createPopup);
 
-      // Change the cursor to a pointer when the mouse is over the places layer.
-      map.on("mouseenter", layerCities, function () {
+      map.on("click", "city_points", createPopup);
+
+      map.on("mouseenter", "city_points", function () {
         map.getCanvas().style.cursor = "pointer";
       });
 
-      // Change it back to a pointer when it leaves.
-      map.on("mouseleave", layerCities, function () {
+      map.on("mouseleave", "city_points", function () {
         map.getCanvas().style.cursor = "";
       });
 
-      map.on("mouseenter", layerPois, function () {
+      map.on("mouseenter", "poi_points", function () {
         map.getCanvas().style.cursor = "pointer";
       });
 
       // Change it back to a pointer when it leaves.
-      map.on("mouseleave", layerPois, function () {
+      map.on("mouseleave", "poi_points", function () {
         map.getCanvas().style.cursor = "";
       });
     }
