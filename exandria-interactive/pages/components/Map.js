@@ -12,6 +12,7 @@ import MapUtil from "../utils/mapUtil";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import SearchLocation from "./SearchLocation";
 
 export default function Map() {
   const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAP_API ?? "";
@@ -42,13 +43,12 @@ export default function Map() {
             {category && <p className="">{category} of</p>}
             <h2 className="font-bold text-xl">{name}</h2>
           </diV>
-          <div>
-            <FontAwesomeIcon
-              className="hover:cursor-pointer text-lg"
-              onClick={() => setPopup(null)}
-              icon={faXmark}
-            />
-          </div>
+
+          <FontAwesomeIcon
+            className="hover:cursor-pointer text-lg"
+            onClick={() => setPopup(null)}
+            icon={faXmark}
+          />
         </div>
 
         {population && <h3 className="font-bold">Population: </h3>}
@@ -85,6 +85,7 @@ export default function Map() {
         </Source>
         <NavigationControl />
         {popup}
+        <SearchLocation />
       </MapGL>
     </MapProvider>
   );
