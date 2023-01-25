@@ -27,10 +27,14 @@ export default function Map() {
         mapStyle="mapbox://styles/litharelle/clbze8br5001414nhxbazvw8p/draft"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
-        <Source type="geojson" data="./data/exandria_cities.geojson">
+        <Source
+          id="cities"
+          type="geojson"
+          data="./data/exandria_cities.geojson"
+        >
           <Layer {...layerCities} />
         </Source>
-        <Source type="geojson" data="./data/exandria_pois.geojson">
+        <Source id="pois" type="geojson" data="./data/exandria_pois.geojson">
           <Layer {...layerPois} />
         </Source>
         <NavigationControl />

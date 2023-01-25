@@ -50,7 +50,7 @@ export const layerPois = {
       [0.01, 0.6][1],
     ],
     "text-justify": "left",
-    "symbol-sort-key": 0,
+    "symbol-sort-key": 1,
   },
   paint: {
     "text-halo-color": "#fff7e4",
