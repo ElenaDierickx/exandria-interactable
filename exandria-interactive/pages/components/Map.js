@@ -13,6 +13,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import SearchLocation from "./SearchLocation";
+import HomeButton from "./HomeButton";
 
 export default function Map() {
   const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAP_API ?? "";
@@ -67,7 +68,7 @@ export default function Map() {
         initialViewState={{
           longitude: 15.4542,
           latitude: 5,
-          zoom: 5,
+          zoom: 4,
         }}
         projection="equirectangular"
         mapStyle="mapbox://styles/litharelle/clbze8br5001414nhxbazvw8p/draft"
@@ -86,6 +87,7 @@ export default function Map() {
         <NavigationControl />
         {popup}
         <SearchLocation />
+        <HomeButton />
       </MapGL>
     </MapProvider>
   );
