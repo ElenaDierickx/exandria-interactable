@@ -2,6 +2,9 @@ import Head from "next/head";
 import "mapbox-gl/dist/mapbox-gl.css";
 import React from "react";
 import Map from "./components/Map";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 export default function Home() {
   return (

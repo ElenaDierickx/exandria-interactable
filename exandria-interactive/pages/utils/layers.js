@@ -57,3 +57,29 @@ export const layerPois = {
     "text-halo-width": 2,
   },
 };
+
+export const layerMeasurePoints = {
+  id: "measure-points",
+  type: "circle",
+  source: "measure",
+  paint: {
+    "circle-radius": 5,
+    "circle-color": "#000",
+  },
+  filter: ["in", "$type", "Point"],
+};
+
+export const layerMeasureLines = {
+  id: "measure-lines",
+  type: "line",
+  source: "measure",
+  layout: {
+    "line-cap": "round",
+    "line-join": "round",
+  },
+  paint: {
+    "line-color": "#000",
+    "line-width": 2.5,
+  },
+  filter: ["in", "$type", "LineString"],
+};
